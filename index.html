@@ -2,6 +2,17 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDZWK3V5YL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GDZWK3V5YL');
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
     <title>Ciğerci Suat Usta | QR Menü</title>
     <meta name="description" content="Ciğerci Suat Usta - Bostanlı, Karşıyaka/İzmir QR Menü">
@@ -418,19 +429,19 @@
 
         function cardTemplate(item, i) {
             return `
-                        <div class="menu-card flex flex-row items-center bg-[#181818] hover:bg-[#202020] transition-colors duration-300 rounded-2xl p-5 border border-white/5 justify-between gap-4 sm:gap-5" style="animation-delay:${i * 50}ms">
-                            <div class="card-text flex-1 min-w-0 pr-2">
-                                <h3 class="font-playfair font-bold text-base text-white leading-snug truncate">${item.name}</h3>
-                                <p class="card-desc text-[11px] text-gray-400 mt-1.5 leading-relaxed truncate">${item.desc}</p>
-                                <p class="card-price font-playfair font-extrabold text-lg mt-3.5 tracking-wide" style="color:#D4AF37; text-shadow:0 0 10px rgba(212,175,55,.22);">${item.price} ₺</p>
-                            </div>
-                            <div class="card-img-wrap flex items-center justify-end shrink-0">
-                                <div class="card-img w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden bg-black/30 ring-1 ring-white/5 ml-1">
-                                    <img src="${imgUrl(item.img)}" alt="${item.name}" loading="lazy" class="w-full h-full object-cover">
+                            <div class="menu-card flex flex-row items-center bg-[#181818] hover:bg-[#202020] transition-colors duration-300 rounded-2xl p-5 border border-white/5 justify-between gap-4 sm:gap-5" style="animation-delay:${i * 50}ms">
+                                <div class="card-text flex-1 min-w-0 pr-2">
+                                    <h3 class="font-playfair font-bold text-base text-white leading-snug truncate">${item.name}</h3>
+                                    <p class="card-desc text-[11px] text-gray-400 mt-1.5 leading-relaxed truncate">${item.desc}</p>
+                                    <p class="card-price font-playfair font-extrabold text-lg mt-3.5 tracking-wide" style="color:#D4AF37; text-shadow:0 0 10px rgba(212,175,55,.22);">${item.price} ₺</p>
+                                </div>
+                                <div class="card-img-wrap flex items-center justify-end shrink-0">
+                                    <div class="card-img w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden bg-black/30 ring-1 ring-white/5 ml-1">
+                                        <img src="${imgUrl(item.img)}" alt="${item.name}" loading="lazy" class="w-full h-full object-cover">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    `;
+                        `;
         }
 
         function renderMenu() {
